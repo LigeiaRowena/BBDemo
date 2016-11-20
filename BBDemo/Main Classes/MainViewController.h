@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  BBDemo
 //
 //  Created by Francesca Corsini on 20/11/16.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+
+@interface MainViewController : UIViewController
 
 
 @end

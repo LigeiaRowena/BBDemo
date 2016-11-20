@@ -10,7 +10,8 @@
 #define BBDemo_Prefix_pch
 
 
-#import <CoreData/CoreData.h>
+#import <AFNetworking/AFNetworking.h>
+#import "Macros.h"
 
 
 #endif /* BBDemo_Prefix_pch */

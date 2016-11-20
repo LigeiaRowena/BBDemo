@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		DF9B9C6B1DE200D80098B9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C671DE200D80098B9EE /* LaunchScreen.storyboard */; };
 		DF9B9C6C1DE200D80098B9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C691DE200D80098B9EE /* Main.storyboard */; };
+		DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9C701DE206170098B9EE /* DetailViewController.m */; };
 		DFB99E781DE1F47500420B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E771DE1F47500420B97 /* main.m */; };
 		DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7A1DE1F47500420B97 /* AppDelegate.m */; };
-		DFB99E7E1DE1F47500420B97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* ViewController.m */; };
+		DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* MainViewController.m */; };
 		DFB99E831DE1F47500420B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB99E821DE1F47500420B97 /* Assets.xcassets */; };
 		FB8E1D523078E2DECFF5EF8A /* Pods_BBDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D0C7F327866B67DB199032 /* Pods_BBDemo.framework */; };
 /* End PBXBuildFile section */
@@ -20,17 +21,19 @@
 		1E266CFC28CF2849DEC3A18E /* Pods-BBDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBDemo/Pods-BBDemo.release.xcconfig"; sourceTree = "<group>"; };
 		53D0C7F327866B67DB199032 /* Pods_BBDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCDB7BFA3E16A0D12C0FF61 /* Pods-BBDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBDemo/Pods-BBDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		DF9B9C631DE1FFC20098B9EE /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DF9B9C641DE200B30098B9EE /* BBDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBDemo-Prefix.pch"; sourceTree = "<group>"; };
 		DF9B9C681DE200D80098B9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF9B9C6A1DE200D80098B9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF9B9C6D1DE2010B0098B9EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF9B9C6F1DE206170098B9EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		DF9B9C701DE206170098B9EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		DF9B9C9A1DE20A460098B9EE /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
 		DFB99E731DE1F47500420B97 /* BBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB99E771DE1F47500420B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFB99E791DE1F47500420B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFB99E7A1DE1F47500420B97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DFB99E7C1DE1F47500420B97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DFB99E7D1DE1F47500420B97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DFB99E7C1DE1F47500420B97 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DFB99E7D1DE1F47500420B97 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		DFB99E821DE1F47500420B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +69,7 @@
 		DF9B9C601DE1FD400098B9EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				DF9B9C631DE1FFC20098B9EE /* Macros.h */,
+				DF9B9C9A1DE20A460098B9EE /* Macros.h */,
 				DFB99E821DE1F47500420B97 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -77,8 +80,10 @@
 			children = (
 				DFB99E791DE1F47500420B97 /* AppDelegate.h */,
 				DFB99E7A1DE1F47500420B97 /* AppDelegate.m */,
-				DFB99E7C1DE1F47500420B97 /* ViewController.h */,
-				DFB99E7D1DE1F47500420B97 /* ViewController.m */,
+				DFB99E7C1DE1F47500420B97 /* MainViewController.h */,
+				DFB99E7D1DE1F47500420B97 /* MainViewController.m */,
+				DF9B9C6F1DE206170098B9EE /* DetailViewController.h */,
+				DF9B9C701DE206170098B9EE /* DetailViewController.m */,
 			);
 			path = "Main Classes";
 			sourceTree = "<group>";
@@ -245,9 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB99E7E1DE1F47500420B97 /* ViewController.m in Sources */,
+				DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */,
 				DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */,
 				DFB99E781DE1F47500420B97 /* main.m in Sources */,
+				DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

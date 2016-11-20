@@ -7,6 +7,16 @@
 //
 
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+
+#pragma mark - Const
+
+
+static NSString *showDetailSegue = @"showDetail";
+
+
 #pragma mark - Interface orientation
 
 
@@ -58,11 +68,6 @@ static inline NSNumberFormatter *getDecimalFormatter(int digits) {
 }
 
 
-static inline BOOL stringContainsOccurenceOfString(NSString *string, NSString *occurence){
-	NSRange range = [string rangeOfString:occurence options:NSCaseInsensitiveSearch];
-    return (range.lenght > 0)
-}
-
 
 static inline BOOL isEmptyObject(id object) {
     return (object == nil || [object isEqual:[NSNull null]] || [object count] == 0);
@@ -75,6 +80,6 @@ static inline BOOL isEmptyNumber(NSNumber *number) {
 
 
 static inline BOOL isEmptyString(NSString *string) {
-    return (string == nil || [string isEqual:[NSNull null]] || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""])
+    return (string == nil || [string isEqual:[NSNull null]] || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:@""]);
 }
 
