@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF9B9C6B1DE200D80098B9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C671DE200D80098B9EE /* LaunchScreen.storyboard */; };
+		DF9B9C6C1DE200D80098B9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C691DE200D80098B9EE /* Main.storyboard */; };
+		DF9B9C6E1DE2010B0098B9EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C6D1DE2010B0098B9EE /* Info.plist */; };
 		DFB99E781DE1F47500420B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E771DE1F47500420B97 /* main.m */; };
 		DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7A1DE1F47500420B97 /* AppDelegate.m */; };
 		DFB99E7E1DE1F47500420B97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* ViewController.m */; };
-		DFB99E811DE1F47500420B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB99E7F1DE1F47500420B97 /* Main.storyboard */; };
 		DFB99E831DE1F47500420B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFB99E821DE1F47500420B97 /* Assets.xcassets */; };
-		DFB99E861DE1F47500420B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFB99E841DE1F47500420B97 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF9B9C631DE1FFC20098B9EE /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		DF9B9C641DE200B30098B9EE /* BBDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBDemo-Prefix.pch"; sourceTree = "<group>"; };
+		DF9B9C681DE200D80098B9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF9B9C6A1DE200D80098B9EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF9B9C6D1DE2010B0098B9EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB99E731DE1F47500420B97 /* BBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB99E771DE1F47500420B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFB99E791DE1F47500420B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DFB99E7A1DE1F47500420B97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFB99E7C1DE1F47500420B97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DFB99E7D1DE1F47500420B97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DFB99E801DE1F47500420B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFB99E821DE1F47500420B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DFB99E851DE1F47500420B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DFB99E871DE1F47500420B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF9B9C601DE1FD400098B9EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF9B9C631DE1FFC20098B9EE /* Macros.h */,
+				DFB99E821DE1F47500420B97 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DF9B9C611DE1FD5E0098B9EE /* Main Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DFB99E791DE1F47500420B97 /* AppDelegate.h */,
+				DFB99E7A1DE1F47500420B97 /* AppDelegate.m */,
+				DFB99E7C1DE1F47500420B97 /* ViewController.h */,
+				DFB99E7D1DE1F47500420B97 /* ViewController.m */,
+			);
+			path = "Main Classes";
+			sourceTree = "<group>";
+		};
 		DFB99E6A1DE1F47500420B97 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +81,8 @@
 		DFB99E751DE1F47500420B97 /* BBDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DFB99E791DE1F47500420B97 /* AppDelegate.h */,
-				DFB99E7A1DE1F47500420B97 /* AppDelegate.m */,
-				DFB99E7C1DE1F47500420B97 /* ViewController.h */,
-				DFB99E7D1DE1F47500420B97 /* ViewController.m */,
-				DFB99E7F1DE1F47500420B97 /* Main.storyboard */,
-				DFB99E821DE1F47500420B97 /* Assets.xcassets */,
-				DFB99E841DE1F47500420B97 /* LaunchScreen.storyboard */,
-				DFB99E871DE1F47500420B97 /* Info.plist */,
+				DF9B9C611DE1FD5E0098B9EE /* Main Classes */,
+				DF9B9C601DE1FD400098B9EE /* Resources */,
 				DFB99E761DE1F47500420B97 /* Supporting Files */,
 			);
 			path = BBDemo;
@@ -74,6 +91,10 @@
 		DFB99E761DE1F47500420B97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF9B9C6D1DE2010B0098B9EE /* Info.plist */,
+				DF9B9C671DE200D80098B9EE /* LaunchScreen.storyboard */,
+				DF9B9C691DE200D80098B9EE /* Main.storyboard */,
+				DF9B9C641DE200B30098B9EE /* BBDemo-Prefix.pch */,
 				DFB99E771DE1F47500420B97 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,9 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFB99E861DE1F47500420B97 /* LaunchScreen.storyboard in Resources */,
+				DF9B9C6E1DE2010B0098B9EE /* Info.plist in Resources */,
+				DF9B9C6C1DE200D80098B9EE /* Main.storyboard in Resources */,
 				DFB99E831DE1F47500420B97 /* Assets.xcassets in Resources */,
-				DFB99E811DE1F47500420B97 /* Main.storyboard in Resources */,
+				DF9B9C6B1DE200D80098B9EE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,20 +181,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DFB99E7F1DE1F47500420B97 /* Main.storyboard */ = {
+		DF9B9C671DE200D80098B9EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DFB99E801DE1F47500420B97 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DFB99E841DE1F47500420B97 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFB99E851DE1F47500420B97 /* Base */,
+				DF9B9C681DE200D80098B9EE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DF9B9C691DE200D80098B9EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF9B9C6A1DE200D80098B9EE /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -272,6 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDemo/BBDemo-Prefix.pch";
 				INFOPLIST_FILE = BBDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = backbase.BBDemo;
@@ -283,6 +307,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBDemo/BBDemo-Prefix.pch";
 				INFOPLIST_FILE = BBDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = backbase.BBDemo;
@@ -309,6 +335,7 @@
 				DFB99E8C1DE1F47500420B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
