@@ -8,12 +8,13 @@
 
 #import "MainViewController.h"
 #import "MainCollectionViewCell.h"
+#import "Employee.h"
+#import "MainCollectionViewLayout.h"
 
-
-#import "AFNetworkingManager.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) NSMutableArray *data;
 @end
 
 
@@ -26,10 +27,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // init 
+    self.data = @[].mutableCopy;
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    
     // getMembers request
-    [AFNetworkingManager getMembers:^(NSDictionary *members, NSError *error) {
-        if (!error && isEmptyObject(members)) {
-            
+    [AFNetworkingManager getMembers:^(NSArray *members, NSError *error) {
+        if (!error && !isEmptyObject(members)) {
+            self.data = members.mutableCopy;
+            [self.collectionView reloadData];
         } else {
             //TODO: show alert
         }
@@ -46,22 +57,28 @@
 
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 3;
+    return [self.data count];
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    NSDictionary *membersSortedDict = self.data[section];
+    NSString *department = [[membersSortedDict allKeys] firstObject];
+    return [membersSortedDict[department] count];
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    [cell setContent:@"test"];
-    // [cell setThumbWithData:diagnosticImage.image];
+    NSDictionary *membersSortedDict = self.data[indexPath.section];
+    NSString *department = [[membersSortedDict allKeys] firstObject];
+    NSArray *members = membersSortedDict[department];
+    Employee *employee = members[indexPath.row];    
+    [cell setContent:employee];
     
     return cell;
 }
+
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:showDetailSegue sender:nil];

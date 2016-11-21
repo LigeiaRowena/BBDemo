@@ -7,6 +7,8 @@
 //
 
 #import "MainCollectionViewCell.h"
+#import "Employee.h"
+#import "UIImageView+Utility.h"
 
 
 @interface MainCollectionViewCell ()
@@ -18,8 +20,27 @@
 @implementation MainCollectionViewCell
 
 
+#pragma mark - Init/Launch CollectionCell
+
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    self.backgroundColor = [UIColor blackColor];
+    [self.layer setBorderColor:[[UIColor grayColor] CGColor]];
+    [self.layer setBorderWidth:1.0f];
+    [self.layer setCornerRadius:5.0f];
+    [self setClipsToBounds:YES];
+}
+
+
+#pragma mark - Public
+
+
 - (void)setContent:(id)content {
-    self.nameLabel.text = content;
+    Employee *employee = (Employee *)content;
+    self.nameLabel.text = employee.fullName;
+    [self.imageView setImageWithFileName:employee.photo];
 }
 
 

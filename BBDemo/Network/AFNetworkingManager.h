@@ -15,9 +15,9 @@
 /**
  * Run getMembers request
  *
- * @param completionHandler block with getMembers response/error
+ * @param completionHandler block called when the request terminates
  */
-+ (void)getMembers:(void (^)(NSDictionary *members, NSError *error))completionHandler;
++ (void)getMembers:(void (^)(NSArray *members, NSError *error))completionHandler;
 
 
 @end

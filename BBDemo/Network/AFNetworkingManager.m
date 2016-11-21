@@ -13,27 +13,31 @@
 @implementation AFNetworkingManager
 
 
-+ (void)getMembers:(void (^)(NSDictionary *members, NSError *error))completionHandler {
+#pragma mark - Requests
+
+
++ (void)getMembers:(void (^)(NSArray *members, NSError *error))completionHandler {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:getMembersURL]];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        NSMutableDictionary *responseDictionary = @{}.mutableCopy;
+        NSMutableArray *responseArray = @[].mutableCopy;
         if (!error && [responseObject isKindOfClass:[NSDictionary class]]) {
             for (NSString *department in [responseObject allKeys]) {
-                NSMutableArray *responseArray = @[].mutableCopy;
+                NSMutableArray *membersSortedArray = @[].mutableCopy;
                 for (NSDictionary *memberDict in responseObject[department]) {
                     Employee *employee = [[Employee alloc] initEmployeeWithObject:memberDict];
                     employee.department = department;
-                    [responseArray addObject:employee];
+                    [membersSortedArray addObject:employee];
                 }
-                [responseDictionary setObject:responseArray forKey:department];
+                NSDictionary *membersSortedDict = @{department: membersSortedArray};
+                [responseArray addObject:membersSortedDict];
             }
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-            completionHandler(responseDictionary, error);
+            completionHandler(responseArray, error);
         });
     }];
     [dataTask resume];

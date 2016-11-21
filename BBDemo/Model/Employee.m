@@ -19,7 +19,6 @@
             self.email = object[@"email"];
             self.photo = object[@"photo"];
             self.role = object[@"role"];
-            //self.role = object[@"role"];
         }
     }
     return self;
