@@ -6,4 +6,4 @@ Features:
 - Minimum OS: iOS 10.1
 - ARC
 - Language used: Objective-C
-- Device: iPad/iPhone
+- Devices: iPad/iPhone
