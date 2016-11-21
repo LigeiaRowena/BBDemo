@@ -38,7 +38,7 @@
     self.fullNameLabel.text = [NSString stringWithFormat:@"Full name: %@", self.employee.fullName];
     self.departmentLabel.text = [NSString stringWithFormat:@"Department: %@", self.employee.department];
     self.roleLabel.text = [NSString stringWithFormat:@"Role: %@", self.employee.role];
-    self.emailLabel.text = [NSString stringWithFormat:@"Email: %@", self.employee.email];
+    self.emailLabel.text = self.employee.email;
 }
 
 
@@ -62,6 +62,7 @@
 
 - (IBAction)sendEmail:(id)sender {
     if (![MFMailComposeViewController canSendMail]) {
+        return;
         //TODO: show info alert
     }
 
