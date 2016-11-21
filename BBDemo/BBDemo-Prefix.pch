@@ -12,6 +12,6 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "Macros.h"
-
+#import "AFNetworkingManager.h"
 
 #endif /* BBDemo_Prefix_pch */

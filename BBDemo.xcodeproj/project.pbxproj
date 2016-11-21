@@ -10,6 +10,9 @@
 		DF9B9C6B1DE200D80098B9EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C671DE200D80098B9EE /* LaunchScreen.storyboard */; };
 		DF9B9C6C1DE200D80098B9EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9C691DE200D80098B9EE /* Main.storyboard */; };
 		DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9C701DE206170098B9EE /* DetailViewController.m */; };
+		DF9B9CA31DE2142D0098B9EE /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CA21DE2142D0098B9EE /* MainCollectionViewCell.m */; };
+		DF9B9CA81DE216810098B9EE /* AFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CA71DE216810098B9EE /* AFNetworkingManager.m */; };
+		DF9B9CAB1DE216AA0098B9EE /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CAA1DE216AA0098B9EE /* Employee.m */; };
 		DFB99E781DE1F47500420B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E771DE1F47500420B97 /* main.m */; };
 		DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7A1DE1F47500420B97 /* AppDelegate.m */; };
 		DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* MainViewController.m */; };
@@ -28,6 +31,12 @@
 		DF9B9C6F1DE206170098B9EE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		DF9B9C701DE206170098B9EE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		DF9B9C9A1DE20A460098B9EE /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		DF9B9CA11DE2142D0098B9EE /* MainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
+		DF9B9CA21DE2142D0098B9EE /* MainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
+		DF9B9CA61DE216810098B9EE /* AFNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingManager.h; sourceTree = "<group>"; };
+		DF9B9CA71DE216810098B9EE /* AFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingManager.m; sourceTree = "<group>"; };
+		DF9B9CA91DE216AA0098B9EE /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		DF9B9CAA1DE216AA0098B9EE /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		DFB99E731DE1F47500420B97 /* BBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB99E771DE1F47500420B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFB99E791DE1F47500420B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,7 +84,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DF9B9C611DE1FD5E0098B9EE /* Main Classes */ = {
+		DF9B9C611DE1FD5E0098B9EE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				DFB99E791DE1F47500420B97 /* AppDelegate.h */,
@@ -85,7 +94,34 @@
 				DF9B9C6F1DE206170098B9EE /* DetailViewController.h */,
 				DF9B9C701DE206170098B9EE /* DetailViewController.m */,
 			);
-			path = "Main Classes";
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DF9B9CA01DE214110098B9EE /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				DF9B9CA11DE2142D0098B9EE /* MainCollectionViewCell.h */,
+				DF9B9CA21DE2142D0098B9EE /* MainCollectionViewCell.m */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		DF9B9CA41DE216310098B9EE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DF9B9CA61DE216810098B9EE /* AFNetworkingManager.h */,
+				DF9B9CA71DE216810098B9EE /* AFNetworkingManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DF9B9CA51DE216460098B9EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF9B9CA91DE216AA0098B9EE /* Employee.h */,
+				DF9B9CAA1DE216AA0098B9EE /* Employee.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DFB99E6A1DE1F47500420B97 = {
@@ -109,7 +145,10 @@
 		DFB99E751DE1F47500420B97 /* BBDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DF9B9C611DE1FD5E0098B9EE /* Main Classes */,
+				DF9B9CA51DE216460098B9EE /* Model */,
+				DF9B9CA41DE216310098B9EE /* Network */,
+				DF9B9CA01DE214110098B9EE /* CustomUI */,
+				DF9B9C611DE1FD5E0098B9EE /* ViewControllers */,
 				DF9B9C601DE1FD400098B9EE /* Resources */,
 				DFB99E761DE1F47500420B97 /* Supporting Files */,
 			);
@@ -252,8 +291,11 @@
 			files = (
 				DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */,
 				DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */,
+				DF9B9CA81DE216810098B9EE /* AFNetworkingManager.m in Sources */,
+				DF9B9CA31DE2142D0098B9EE /* MainCollectionViewCell.m in Sources */,
 				DFB99E781DE1F47500420B97 /* main.m in Sources */,
 				DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */,
+				DF9B9CAB1DE216AA0098B9EE /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

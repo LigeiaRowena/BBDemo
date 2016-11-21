@@ -15,6 +15,8 @@
 
 
 static NSString *showDetailSegue = @"showDetail";
+static NSString *cellIdentifier = @"cellIdentifier";
+static NSString *getMembersURL = @"http://nielsmouthaan.nl/backbase/members.php";
 
 
 #pragma mark - Interface orientation
