@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Employee.h"
 
 
 @interface DetailViewController : UIViewController
+
+
+@property (nonatomic, strong) Employee *employee;
 
 
 @end

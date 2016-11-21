@@ -10,6 +10,7 @@
 #import "MainCollectionViewCell.h"
 #import "Employee.h"
 #import "MainCollectionHeader.h"
+#import "DetailViewController.h"
 
 
 @interface MainViewController ()
@@ -45,7 +46,7 @@
             self.data = members.mutableCopy;
             [self.collectionView reloadData];
         } else {
-            //TODO: show alert
+            //TODO: show error alert
         }
     }];
 }
@@ -54,6 +55,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:showDetailSegue]) {
+        DetailViewController *destination = (DetailViewController *)segue.destinationViewController;
+        NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        Employee *employee = [self getEmployeeFromIndexPath:indexPath];
+        destination.employee = employee;
+    }
+}
+
+
+#pragma mark - Private
+
+
+- (Employee *)getEmployeeFromIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *membersSortedDict = self.data[indexPath.section];
+    NSString *department = [[membersSortedDict allKeys] firstObject];
+    NSArray *members = membersSortedDict[department];
+    return members[indexPath.row];
+}
+
 
 
 #pragma mark - UICollectionViewDataSource/UICollectionViewDelegate
@@ -91,10 +114,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-    NSDictionary *membersSortedDict = self.data[indexPath.section];
-    NSString *department = [[membersSortedDict allKeys] firstObject];
-    NSArray *members = membersSortedDict[department];
-    Employee *employee = members[indexPath.row];    
+    Employee *employee = [self getEmployeeFromIndexPath:indexPath];
     [cell setContent:employee];
     
     return cell;

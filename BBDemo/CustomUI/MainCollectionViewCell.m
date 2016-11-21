@@ -26,8 +26,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    self.backgroundColor = [UIColor blackColor];
-    [self.layer setBorderColor:[[UIColor grayColor] CGColor]];
+    //self.backgroundColor = [UIColor blackColor];
+    [self.layer setBorderColor:[[UIColor redColor] CGColor]];
     [self.layer setBorderWidth:1.0f];
     [self.layer setCornerRadius:5.0f];
     [self setClipsToBounds:YES];

@@ -111,15 +111,15 @@
 		DF9B9CA01DE214110098B9EE /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				DF9B9CAC1DE2F78E0098B9EE /* UIImageView+Utility.h */,
-				DF9B9CAD1DE2F78E0098B9EE /* UIImageView+Utility.m */,
+				DF9B9CDD1DE30F370098B9EE /* MainCollectionHeader.h */,
+				DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */,
+				DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */,
 				DF9B9CA11DE2142D0098B9EE /* MainCollectionViewCell.h */,
 				DF9B9CA21DE2142D0098B9EE /* MainCollectionViewCell.m */,
 				DF9B9CD51DE3066C0098B9EE /* MainCollectionViewLayout.h */,
 				DF9B9CD61DE3066C0098B9EE /* MainCollectionViewLayout.m */,
-				DF9B9CDD1DE30F370098B9EE /* MainCollectionHeader.h */,
-				DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */,
-				DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */,
+				DF9B9CAC1DE2F78E0098B9EE /* UIImageView+Utility.h */,
+				DF9B9CAD1DE2F78E0098B9EE /* UIImageView+Utility.m */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
