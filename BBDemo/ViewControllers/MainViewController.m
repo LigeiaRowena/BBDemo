@@ -9,7 +9,7 @@
 #import "MainViewController.h"
 #import "MainCollectionViewCell.h"
 #import "Employee.h"
-#import "MainCollectionViewLayout.h"
+#import "MainCollectionHeader.h"
 
 
 @interface MainViewController ()
@@ -29,6 +29,9 @@
     
     // init 
     self.data = @[].mutableCopy;
+    
+    UINib *cellNibHeader = [UINib nibWithNibName:@"MainCollectionHeader" bundle:nil];
+    [self.collectionView registerNib:cellNibHeader forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier];
 }
 
 
@@ -65,6 +68,24 @@
     NSDictionary *membersSortedDict = self.data[section];
     NSString *department = [[membersSortedDict allKeys] firstObject];
     return [membersSortedDict[department] count];
+}
+
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    UICollectionReusableView *reusableview = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        MainCollectionHeader *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
+        NSDictionary *membersSortedDict = self.data[indexPath.section];
+        NSString *department = [[membersSortedDict allKeys] firstObject];
+        headerView.headerLabel.text = department;
+        reusableview = headerView;
+    }
+    return reusableview;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(self.collectionView.frame.size.width, 20);
 }
 
 

@@ -15,6 +15,8 @@
 		DF9B9CAB1DE216AA0098B9EE /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CAA1DE216AA0098B9EE /* Employee.m */; };
 		DF9B9CAE1DE2F78E0098B9EE /* UIImageView+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CAD1DE2F78E0098B9EE /* UIImageView+Utility.m */; };
 		DF9B9CD71DE3066C0098B9EE /* MainCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CD61DE3066C0098B9EE /* MainCollectionViewLayout.m */; };
+		DF9B9CE01DE30F370098B9EE /* MainCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */; };
+		DF9B9CE11DE30F370098B9EE /* MainCollectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */; };
 		DFB99E781DE1F47500420B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E771DE1F47500420B97 /* main.m */; };
 		DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7A1DE1F47500420B97 /* AppDelegate.m */; };
 		DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* MainViewController.m */; };
@@ -43,6 +45,9 @@
 		DF9B9CAD1DE2F78E0098B9EE /* UIImageView+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Utility.m"; sourceTree = "<group>"; };
 		DF9B9CD51DE3066C0098B9EE /* MainCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewLayout.h; sourceTree = "<group>"; };
 		DF9B9CD61DE3066C0098B9EE /* MainCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewLayout.m; sourceTree = "<group>"; };
+		DF9B9CDD1DE30F370098B9EE /* MainCollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionHeader.h; sourceTree = "<group>"; };
+		DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionHeader.m; sourceTree = "<group>"; };
+		DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionHeader.xib; sourceTree = "<group>"; };
 		DFB99E731DE1F47500420B97 /* BBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB99E771DE1F47500420B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFB99E791DE1F47500420B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +117,9 @@
 				DF9B9CA21DE2142D0098B9EE /* MainCollectionViewCell.m */,
 				DF9B9CD51DE3066C0098B9EE /* MainCollectionViewLayout.h */,
 				DF9B9CD61DE3066C0098B9EE /* MainCollectionViewLayout.m */,
+				DF9B9CDD1DE30F370098B9EE /* MainCollectionHeader.h */,
+				DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */,
+				DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 			files = (
 				DF9B9C6C1DE200D80098B9EE /* Main.storyboard in Resources */,
 				DFB99E831DE1F47500420B97 /* Assets.xcassets in Resources */,
+				DF9B9CE11DE30F370098B9EE /* MainCollectionHeader.xib in Resources */,
 				DF9B9C6B1DE200D80098B9EE /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +312,7 @@
 				DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */,
 				DF9B9CA81DE216810098B9EE /* AFNetworkingManager.m in Sources */,
 				DF9B9CAE1DE2F78E0098B9EE /* UIImageView+Utility.m in Sources */,
+				DF9B9CE01DE30F370098B9EE /* MainCollectionHeader.m in Sources */,
 				DF9B9CA31DE2142D0098B9EE /* MainCollectionViewCell.m in Sources */,
 				DFB99E781DE1F47500420B97 /* main.m in Sources */,
 				DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */,
