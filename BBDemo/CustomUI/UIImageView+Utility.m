@@ -15,7 +15,7 @@
 #pragma mark - Utility methods
 
 
-- (void)setImageWithFileName:(NSString *)fileName
+- (BOOL)setImageWithFileName:(NSString *)fileName
 {
 	// set activity view while client is loading the image
 	UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
@@ -26,6 +26,7 @@
 	[activity startAnimating];
 	
 	// set a placeholder
+    BOOL result = FALSE;
     self.image = [UIImage imageNamed:@"placeholder"];
     
     // get bytes to set image property
@@ -34,10 +35,14 @@
     if (url != nil) {
         NSData *data = [NSData dataWithContentsOfURL:url options:0 error:&error];
         UIImage *image = [UIImage imageWithData:data];
-        if (image && !error)
+        if (image && !error) {
             self.image = image;
+            result = TRUE;
+        }
     }
     [activity stopAnimating];
+    
+    return result;
 }
 
 

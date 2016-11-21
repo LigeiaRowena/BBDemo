@@ -9,6 +9,11 @@
 #import "PhotoViewController.h"
 
 
+@interface PhotoViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@end
+
+
 @implementation PhotoViewController
 
 
@@ -17,6 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.imageView setImageWithFileName:self.photo];
 }
 
 

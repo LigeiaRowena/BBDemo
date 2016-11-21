@@ -16,8 +16,9 @@
  * Request image property
  *
  * @param fileName photo's file name
+ * @return true if the photo is a valid UIImage
  */
-- (void)setImageWithFileName:(NSString *)fileName;
+- (BOOL)setImageWithFileName:(NSString *)fileName;
 
 
 @end

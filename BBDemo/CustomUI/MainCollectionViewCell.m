@@ -8,7 +8,6 @@
 
 #import "MainCollectionViewCell.h"
 #import "Employee.h"
-#import "UIImageView+Utility.h"
 
 
 @interface MainCollectionViewCell ()

@@ -14,5 +14,7 @@
 #import "Macros.h"
 #import "AFNetworkingManager.h"
 #import <QuartzCore/QuartzCore.h>
+#import "UIImageView+Utility.h"
+
 
 #endif /* BBDemo_Prefix_pch */

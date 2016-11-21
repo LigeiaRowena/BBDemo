@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Employee.h"
+#import "MessageUI/MessageUI.h"
 
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 
 @property (nonatomic, strong) Employee *employee;

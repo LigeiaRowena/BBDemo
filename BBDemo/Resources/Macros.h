@@ -15,6 +15,7 @@
 
 
 static NSString *showDetailSegue = @"showDetail";
+static NSString *showPhotoSegue = @"showPhoto";
 static NSString *cellIdentifier = @"cellIdentifier";
 static NSString *headerIdentifier = @"headerIdentifier";
 static NSString *getMembersURL = @"http://nielsmouthaan.nl/backbase/members.php";

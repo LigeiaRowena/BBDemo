@@ -7,7 +7,6 @@
 //
 
 #import "DetailViewController.h"
-#import "UIImageView+Utility.h"
 #import "PhotoViewController.h"
 
 
@@ -34,7 +33,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.imageView setImageWithFileName:self.employee.photo];
+    BOOL success = [self.imageView setImageWithFileName:self.employee.photo];
+    self.employee.isValidPhoto = success;
     self.fullNameLabel.text = [NSString stringWithFormat:@"Full name: %@", self.employee.fullName];
     self.departmentLabel.text = [NSString stringWithFormat:@"Department: %@", self.employee.department];
     self.roleLabel.text = [NSString stringWithFormat:@"Role: %@", self.employee.role];
@@ -42,12 +42,51 @@
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:showPhotoSegue]) {
+        PhotoViewController *destination = (PhotoViewController *)segue.destinationViewController;
+        destination.photo = self.employee.photo;
+    }
+}
+
+
+
 #pragma mark - Actions
 
 
 - (IBAction)openPhoto:(id)sender {
+    if (self.employee.isValidPhoto)
+        [self performSegueWithIdentifier:showPhotoSegue sender:nil];
 }
 
+
+- (IBAction)sendEmail:(id)sender {
+    if (![MFMailComposeViewController canSendMail]) {
+        //TODO: show info alert
+    }
+
+    else if (isEmptyString(self.employee.email)) {
+        MFMailComposeViewController *mcController = [[MFMailComposeViewController alloc] init];
+        mcController.mailComposeDelegate = self;
+        NSArray *recipients = @[self.employee.email];
+        [mcController setToRecipients:recipients];
+        mcController.mailComposeDelegate = self;
+        [self presentViewController:mcController animated:YES completion:nil];
+    }
+}
+
+
+#pragma mark - MFMailComposeViewControllerDelegate/MFMessageComposeViewControllerDelegate
+
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 @end

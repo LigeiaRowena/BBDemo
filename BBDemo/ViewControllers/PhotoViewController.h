@@ -12,4 +12,7 @@
 @interface PhotoViewController : UIViewController
 
 
+@property (nonatomic, strong) NSString *photo;
+
+
 @end

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *photo;
 @property (nonatomic, strong) NSString *role;
+@property (nonatomic) BOOL isValidPhoto;
 
 
 /**
