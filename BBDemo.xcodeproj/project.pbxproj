@@ -17,6 +17,7 @@
 		DF9B9CD71DE3066C0098B9EE /* MainCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CD61DE3066C0098B9EE /* MainCollectionViewLayout.m */; };
 		DF9B9CE01DE30F370098B9EE /* MainCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */; };
 		DF9B9CE11DE30F370098B9EE /* MainCollectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */; };
+		DF9B9CE41DE317FF0098B9EE /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9B9CE31DE317FF0098B9EE /* PhotoViewController.m */; };
 		DFB99E781DE1F47500420B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E771DE1F47500420B97 /* main.m */; };
 		DFB99E7B1DE1F47500420B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7A1DE1F47500420B97 /* AppDelegate.m */; };
 		DFB99E7E1DE1F47500420B97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB99E7D1DE1F47500420B97 /* MainViewController.m */; };
@@ -48,6 +49,8 @@
 		DF9B9CDD1DE30F370098B9EE /* MainCollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionHeader.h; sourceTree = "<group>"; };
 		DF9B9CDE1DE30F370098B9EE /* MainCollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionHeader.m; sourceTree = "<group>"; };
 		DF9B9CDF1DE30F370098B9EE /* MainCollectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCollectionHeader.xib; sourceTree = "<group>"; };
+		DF9B9CE21DE317FF0098B9EE /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		DF9B9CE31DE317FF0098B9EE /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		DFB99E731DE1F47500420B97 /* BBDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB99E771DE1F47500420B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFB99E791DE1F47500420B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				DFB99E7D1DE1F47500420B97 /* MainViewController.m */,
 				DF9B9C6F1DE206170098B9EE /* DetailViewController.h */,
 				DF9B9C701DE206170098B9EE /* DetailViewController.m */,
+				DF9B9CE21DE317FF0098B9EE /* PhotoViewController.h */,
+				DF9B9CE31DE317FF0098B9EE /* PhotoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 				DFB99E781DE1F47500420B97 /* main.m in Sources */,
 				DF9B9C711DE206170098B9EE /* DetailViewController.m in Sources */,
 				DF9B9CAB1DE216AA0098B9EE /* Employee.m in Sources */,
+				DF9B9CE41DE317FF0098B9EE /* PhotoViewController.m in Sources */,
 				DF9B9CD71DE3066C0098B9EE /* MainCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

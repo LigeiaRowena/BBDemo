@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "UIImageView+Utility.h"
+#import "PhotoViewController.h"
 
 
 @interface DetailViewController ()
@@ -41,9 +42,12 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+#pragma mark - Actions
+
+
+- (IBAction)openPhoto:(id)sender {
 }
+
 
 
 @end
