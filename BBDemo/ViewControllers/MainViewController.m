@@ -46,15 +46,13 @@
             self.data = members.mutableCopy;
             [self.collectionView reloadData];
         } else {
-            //TODO: show error alert
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Unable to reach network" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:alertAction];
+            alertController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+            [self presentViewController:alertController animated:YES completion:nil];
         }
     }];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    //TODO: to implement
 }
 
 

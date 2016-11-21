@@ -61,12 +61,17 @@
 
 
 - (IBAction)sendEmail:(id)sender {
-    if (![MFMailComposeViewController canSendMail]) {
-        return;
-        //TODO: show info alert
+    if (![MFMailComposeViewController canSendMail] || isEmptyString(self.employee.email)) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Unable to send email" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:alertAction];
+        alertController.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        [self presentViewController:alertController animated:YES completion:^{
+            return;
+        }];
     }
 
-    else if (isEmptyString(self.employee.email)) {
+    else {
         MFMailComposeViewController *mcController = [[MFMailComposeViewController alloc] init];
         mcController.mailComposeDelegate = self;
         NSArray *recipients = @[self.employee.email];
